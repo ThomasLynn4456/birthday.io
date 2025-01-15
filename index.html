@@ -34,18 +34,29 @@
         }
 
         #floating-image1 {
+            animation-name: fromLeft;
+            animation-duration: 1.5s;
+            animation-timing-function: linear;
             position: absolute;
             top: 120px;
             left: 10%;
         }
 
         #floating-image2 {
+            animation-name: fromTop;
+            animation-duration: 1.5s;
+            animation-timing-function: linear;
+            position: absolute;
             position: absolute;
             top: 60px;
             left: 40%;
         }
 
         #floating-image3 {
+            animation-name: fromRight;
+            animation-duration: 1.5s;
+            animation-timing-function: linear;
+            position: absolute;
             position: absolute;
             top: 120px;
             left: 70%;
@@ -75,8 +86,42 @@
             bottom: 120px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
             text-shadow: offset-x offset-y blur-radius color;
-            left: 10%;
+            left: 5%;
         }
+
+        @keyframes fromLeft {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes fromRight {
+            0% {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+    
+        @keyframes fromTop {
+            0% {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+    
     </style>
 </head>
 
